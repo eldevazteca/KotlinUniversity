@@ -45,8 +45,8 @@ fun HomeWorkScreen(modifier: Modifier) {
             textAlign = TextAlign.Center,
             modifier = Modifier
                 .fillMaxWidth()
-                .clip(RoundedCornerShape(12.dp))
                 .padding(top = 30.dp)
+                .clip(RoundedCornerShape(12.dp))
                 .background(Color.DarkGray)
                 .padding(vertical = 20.dp),
             color = Color.White
