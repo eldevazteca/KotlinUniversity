@@ -4,6 +4,7 @@ import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -32,91 +33,102 @@ import com.eldevazteca.primeraappcompose.R
 
 @Composable
 fun HomeWorkScreen(modifier: Modifier) {
-    Column (
-        modifier = modifier
-            .fillMaxSize()
-            .background(Color.Gray)
-            .padding(10.dp)
-    ) {
-        Text(
-            "Elige que personaje deseas eliminar",
-            fontSize = 24.sp,
-            fontWeight = FontWeight.Bold,
-            textAlign = TextAlign.Center,
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(top = 30.dp)
-                .clip(RoundedCornerShape(12.dp))
-                .background(Color.DarkGray)
-                .padding(vertical = 20.dp),
-            color = Color.White
+    Box(modifier = modifier.fillMaxSize()) {
+        Image(
+            painterResource(R.drawable.bg_app),
+            contentDescription = null,
+            modifier.fillMaxSize(),
+            contentScale = ContentScale.Crop
         )
-        Spacer(modifier = Modifier.height(20.dp))
-        Row(
-            modifier = Modifier
-                .padding(vertical = 20.dp)
-                .fillMaxWidth()
-                .height(50.dp),
-            horizontalArrangement = Arrangement.SpaceAround
-        ) {
-            Button(
-                onClick = {},
-                colors = ButtonDefaults.buttonColors(
-                    containerColor = Color.Black,
-                    contentColor = Color.White
-                ),
-                modifier = Modifier
-                    .height(60.dp)) {
-                Icon(Icons.Default.Check, contentDescription = null)
-                Text("Therian")
-            }
-            Button(onClick = {},
-                colors = ButtonDefaults.buttonColors(
-                    containerColor = Color.Magenta,
-                    contentColor = Color.White
-                ),
-                modifier = Modifier
-                    .height(60.dp)) {
-                Icon(Icons.Default.Check, contentDescription = null)
-                Text("Furro")
-            }
-        }
 
-        Spacer(modifier = Modifier.weight(1f))
-
-        Row(
-            modifier = Modifier
-                .padding(vertical = 20.dp)
-                .fillMaxWidth()
+        Column(
+            modifier = modifier
+                .fillMaxSize()
+                .padding(10.dp)
         ) {
-            Image(
-                painterResource(R.drawable.loc_dog),
-                contentDescription = null,
+            Text(
+                "Elige que personaje deseas eliminar",
+                fontSize = 24.sp,
+                fontWeight = FontWeight.Bold,
+                textAlign = TextAlign.Center,
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(horizontal = 20.dp, vertical = 50.dp)
-                    .border(2.dp, Color.White, RoundedCornerShape(12.dp)),
-                contentScale = ContentScale.Crop,
+                    .padding(top = 30.dp)
+                    .clip(RoundedCornerShape(12.dp))
+                    .background(Color.DarkGray)
+                    .padding(vertical = 20.dp),
+                color = Color.White
             )
-        }
+            Spacer(modifier = Modifier.height(20.dp))
+            Row(
+                modifier = Modifier
+                    .padding(vertical = 20.dp)
+                    .fillMaxWidth()
+                    .height(50.dp),
+                horizontalArrangement = Arrangement.SpaceAround
+            ) {
+                Button(
+                    onClick = {},
+                    colors = ButtonDefaults.buttonColors(
+                        containerColor = Color.Black,
+                        contentColor = Color.White
+                    ),
+                    modifier = Modifier
+                        .height(60.dp)
+                ) {
+                    Icon(Icons.Default.Check, contentDescription = null)
+                    Text("Therian", fontWeight = FontWeight.Bold)
+                }
+                Button(
+                    onClick = {},
+                    colors = ButtonDefaults.buttonColors(
+                        containerColor = Color.Magenta,
+                        contentColor = Color.Black
+                    ),
+                    modifier = Modifier
+                        .height(60.dp)
+                ) {
+                    Icon(Icons.Default.Check, contentDescription = null)
+                    Text("Furro", fontWeight = FontWeight.Bold)
+                }
+            }
 
-        Spacer(modifier = Modifier.weight(1f))
+            Spacer(modifier = Modifier.weight(1f))
 
-        Row(
-            modifier = Modifier
-                .padding(vertical = 20.dp)
-                .fillMaxWidth()
-        ) {
-            Button(
-                colors = ButtonDefaults.buttonColors(
-                    containerColor = Color(0xFF0fA0Fa),
-                    contentColor = Color.White
-                ),
-                onClick = {}, modifier = Modifier
-                    .padding(horizontal = 50.dp)
+            Row(
+                modifier = Modifier
+                    .padding(vertical = 20.dp)
                     .fillMaxWidth()
             ) {
-                Text("Hola")
+                Image(
+                    painterResource(R.drawable.loc_dog),
+                    contentDescription = null,
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(horizontal = 20.dp, vertical = 50.dp)
+                        .border(2.dp, Color.White, RoundedCornerShape(12.dp)),
+                    contentScale = ContentScale.Crop,
+                )
+            }
+
+            Spacer(modifier = Modifier.weight(1f))
+
+            Row(
+                modifier = Modifier
+                    .padding(vertical = 20.dp)
+                    .fillMaxWidth()
+            ) {
+                Button(
+                    colors = ButtonDefaults.buttonColors(
+                        containerColor = Color(0xFF0fA0Fa),
+                        contentColor = Color.White
+                    ),
+                    onClick = {}, modifier = Modifier
+                        .padding(horizontal = 50.dp)
+                        .fillMaxWidth()
+                ) {
+                    Text("Hola")
+                }
             }
         }
     }
