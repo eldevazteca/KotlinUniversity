@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Examen Uno</string>
+
+    <!--?  Home Screen  -->
+    <string name="title_home_screen">Home</string>
+    
+    <!--?  Profile Screen  -->
+    <string name="title_profile_screen">Profile</string>
+    <string name="info_message">We\'re almost done</string>
+    <string name="to_complete_section">Pending jobs to complete</string>
+
+    <!--? Global Strings  -->
+    <string name="username">eldevazteca</string>
+    <string name="jobs">2 jobs</string>
+</resources>
